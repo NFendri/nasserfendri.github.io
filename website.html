@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nasser Fendri — Quantitative Finance</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fff;max-width:780px;margin:0 auto;padding:0 2rem}
+a{color:#1a55a0;text-decoration:none}
+a:hover{text-decoration:underline}
+
+nav{padding:2rem 0 1.5rem;border-bottom:1px solid #e0e0e0;margin-bottom:2.5rem;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:0.5rem}
+.nav-name{font-size:17px;font-weight:normal;color:#1a1a1a}
+.nav-links{display:flex;gap:1.5rem;font-family:Arial,sans-serif;font-size:13px}
+.nav-links a{color:#1a55a0}
+
+.hero{margin-bottom:3rem}
+h1{font-size:26px;font-weight:normal;margin-bottom:0.25rem;color:#1a1a1a}
+.hero-title{font-family:Arial,sans-serif;font-size:14px;color:#555;margin-bottom:0.2rem}
+.hero-affil{font-family:Arial,sans-serif;font-size:14px;color:#555;margin-bottom:1.25rem}
+
+.hero-body{display:grid;grid-template-columns:1fr 180px;gap:2.5rem;align-items:start}
+.bio{font-size:15px;line-height:1.75;color:#2a2a2a}
+.bio p+p{margin-top:0.9rem}
+
+.contact-block{font-family:Arial,sans-serif;font-size:13px;line-height:1.9;color:#333}
+.contact-block a{color:#1a55a0}
+.contact-label{color:#777;font-size:12px;display:block;margin-top:0.75rem}
+.contact-label:first-child{margin-top:0}
+
+/* Photo placeholder */
+.photo-wrap{margin-bottom:1.1rem;text-align:center}
+.photo-placeholder{width:130px;height:155px;background:#f0f0f0;border:1px solid #ddd;border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;color:#aaa;font-family:Arial,sans-serif;font-size:11px;gap:6px}
+.photo-placeholder svg{opacity:.35}
+
+a.cv-btn{display:inline-block;margin-top:0.75rem;padding:4px 14px;border:1px solid #1a55a0;border-radius:3px;font-size:12px}
+
+h2{font-size:17px;font-weight:normal;color:#1a1a1a;border-bottom:1px solid #e0e0e0;padding-bottom:0.4rem;margin-bottom:1.25rem;margin-top:2.75rem}
+
+.pub-item{margin-bottom:1.75rem}
+.pub-title{font-size:15px;color:#1a1a1a;font-style:italic}
+.pub-meta{font-family:Arial,sans-serif;font-size:13px;color:#555;margin-top:0.2rem}
+.pub-desc{font-family:Arial,sans-serif;font-size:13px;color:#444;margin-top:0.35rem;line-height:1.6}
+.pub-links{margin-top:0.4rem;font-family:Arial,sans-serif;font-size:12px;display:flex;gap:0.75rem;flex-wrap:wrap}
+.pub-links a{color:#1a55a0;padding:1px 8px;border:1px solid #c8d8f0;border-radius:3px}
+.pub-links a:hover{background:#eef4ff;text-decoration:none}
+.pub-links a.disabled{color:#aaa;border-color:#e0e0e0;pointer-events:none;cursor:default}
+
+.exp-item{display:grid;grid-template-columns:150px 1fr;gap:1rem;margin-bottom:1.5rem;font-size:14.5px}
+.exp-date{font-family:Arial,sans-serif;font-size:12.5px;color:#777;padding-top:2px;line-height:1.5}
+.exp-role{color:#1a1a1a;margin-bottom:0.15rem}
+.exp-org{font-family:Arial,sans-serif;font-size:13px;color:#555}
+.exp-desc{font-family:Arial,sans-serif;font-size:13px;color:#444;margin-top:0.4rem;line-height:1.6}
+
+.skills-table{width:100%;font-family:Arial,sans-serif;font-size:13.5px;border-collapse:collapse}
+.skills-table td{padding:0.45rem 0;vertical-align:top;border-bottom:1px solid #f0f0f0}
+.skills-table td:first-child{width:170px;color:#555;padding-right:1rem}
+.skills-table tr:last-child td{border-bottom:none}
+
+.edu-item{margin-bottom:1.4rem;font-size:14.5px}
+.edu-degree{color:#1a1a1a;margin-bottom:0.1rem}
+.edu-meta{font-family:Arial,sans-serif;font-size:13px;color:#555}
+.edu-courses{font-family:Arial,sans-serif;font-size:13px;color:#444;margin-top:0.3rem}
+
+footer{margin-top:3.5rem;padding:1.5rem 0;border-top:1px solid #e0e0e0;font-family:Arial,sans-serif;font-size:12px;color:#aaa;text-align:center}
+
+/* Responsive */
+@media(max-width:560px){
+  .hero-body{grid-template-columns:1fr}
+  .contact-block{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem}
+  .contact-block .photo-wrap{grid-column:1/-1;text-align:left}
+  .contact-block .cv-btn{grid-column:1/-1}
+  .photo-placeholder{margin:0}
+  .exp-item{grid-template-columns:1fr}
+  .exp-date{padding-top:0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Nasser Fendri</span>
+  <div class="nav-links">
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="files/cv.pdf">CV</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Nasser Fendri</h1>
+  <div class="hero-title">M.Sc. Mathematics — Actuarial &amp; Financial Mathematics</div>
+  <div class="hero-affil">Quantitative FSRM Consultant &nbsp;·&nbsp; EY Canada, Montreal, QC</div>
+
+  <div class="hero-body">
+    <div class="bio">
+      <p>
+        I am a quantitative analyst with training in stochastic methods, financial engineering, and numerical analysis. My research has focused on stochastic optimal control applied to insurance risk models, with solutions derived via Hamilton–Jacobi–Bellman equations and implemented using finite-difference and Monte Carlo methods in Python.
+      </p>
+      <p>
+        At EY Canada I work in financial services risk management, with responsibilities spanning model risk governance and wholesale credit risk PD modeling. This role has grounded the theoretical work in production constraints: real data, audit-facing documentation, and regulatory scrutiny — the same rigor required in front-office model development.
+      </p>
+      <p>
+        I am seeking quantitative roles in derivatives pricing, credit risk, or model validation where mathematical depth and implementation quality both matter.
+      </p>
+    </div>
+
+    <div class="contact-block">
+      <div class="photo-wrap">
+        <div class="photo-placeholder">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.4">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Photo coming soon</span>
+        </div>
+      </div>
+      <span class="contact-label">Email</span>
+      <a href="mailto:fendrinacer11@gmail.com">fendrinacer11@gmail.com</a>
+      <span class="contact-label">LinkedIn</span>
+      <a href="https://linkedin.com/in/nasser-fendri" target="_blank" rel="noopener">nasser-fendri</a>
+      <span class="contact-label">Languages</span>
+      English · French · Arabic
+      <br>
+      <a class="cv-btn" href="files/cv.pdf">Download CV</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== RESEARCH ==================== -->
+<h2 id="research">Research &amp; Projects</h2>
+
+<div class="pub-item">
+  <div class="pub-title">Dividend optimization under a mean-reverting surplus model with ruin penalization</div>
+  <div class="pub-meta">Master's thesis &nbsp;·&nbsp; UQAM, 2025 &nbsp;·&nbsp; Supervisor: Prof. Clarence Simard</div>
+  <div class="pub-desc">Formulated an optimal dividend problem for an insurance company under an Ornstein–Uhlenbeck surplus process with ruin-time penalization. Derived and solved the Hamilton–Jacobi–Bellman equation analytically and numerically; validated results via  Monte Carlo simulation and analytical equations in Python.</div>
+  <div class="pub-links">
+    <a href="#" class="disabled" title="Link coming soon">Thesis PDF (coming soon)</a>
+    <a href="#" class="disabled" title="Link coming soon">Code (coming soon)</a>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-title">Option pricing library: a comparative study of numerical methods</div>
+  <div class="pub-meta">Project &nbsp;·&nbsp; Python, MATLAB &nbsp;·&nbsp; 2024</div>
+  <div class="pub-desc">Implemented and benchmarked Black–Scholes PDE (analytical and finite-difference), binomial and trinomial trees, and Monte Carlo simulation for European and American options. American options priced via Howard's policy-iteration algorithm; compared convergence speed and numerical accuracy across methods.</div>
+  <div class="pub-links">
+    <a href="#" class="disabled" title="Link coming soon">GitHub (coming soon)</a>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-title">Optimal timing for e-commerce transition under stochastic impulse control</div>
+  <div class="pub-meta">Research internship &nbsp;·&nbsp; GERAD Laboratory, Montreal &nbsp;·&nbsp; 2022</div>
+  <div class="pub-desc">Modeled the retailer's transition-to-e-commerce decision as a stochastic impulse control problem. Applied dynamic programming and optimal stopping theory to characterize switching thresholds under market uncertainty; analyzed sensitivity via Monte Carlo simulation in Python.</div>
+  <div class="pub-links">
+    <a href="#" class="disabled" title="Link coming soon">Report (coming soon)</a>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-title">Equity return prediction on emerging market data</div>
+  <div class="pub-meta">Project &nbsp;·&nbsp; Python &nbsp;·&nbsp; 2023</div>
+  <div class="pub-desc">Applied EDA, PCA, and factor analysis to Tunisian stock market data; compared OLS, polynomial, and regularized regression models to forecast returns, evaluated on out-of-sample R², RMSE, and residual diagnostics.</div>
+  <div class="pub-links">
+    <a href="#" class="disabled" title="Link coming soon">GitHub (coming soon)</a>
+  </div>
+</div>
+
+<!-- ==================== EXPERIENCE ==================== -->
+<h2 id="experience">Experience</h2>
+
+<div class="exp-item">
+  <div class="exp-date">Jun 2024 — Present</div>
+  <div class="exp-right">
+    <div class="exp-role">FSRM Consultant — Model Risk</div>
+    <div class="exp-org">EY Canada &nbsp;·&nbsp; Montreal</div>
+    <div class="exp-desc">
+      Administer a model risk management platform governing 800+ models across credit, market, and operational risk. Developed KPI dashboards (Power BI) and optimized SQL pipelines to automate inherent/residual risk scoring. Led wholesale credit risk PD model development for large corporate portfolios using a shadow rating methodology in SAS and SQL, aligned to IFRS 9 and Basel. Designed model risk scoring methodology consistent with SR 11-7 / E-23 governance standards.
+    </div>
+  </div>
+</div>
+
+<div class="exp-item">
+  <div class="exp-date">Jan 2024 — Feb 2025</div>
+  <div class="exp-right">
+    <div class="exp-role">Research Scholar — Stochastic Control</div>
+    <div class="exp-org">UQAM &nbsp;·&nbsp; Montreal</div>
+    <div class="exp-desc">
+      Developed a dividend optimization framework under a mean-reverting O–U surplus process with ruin-time penalization; derived HJB equations and implemented finite-difference solvers and Monte Carlo simulations in Python (NumPy, SciPy).
+    </div>
+  </div>
+</div>
+
+<div class="exp-item">
+  <div class="exp-date">Jan – Apr 2024</div>
+  <div class="exp-right">
+    <div class="exp-role">Teaching Assistant — Actuarial Finance</div>
+    <div class="exp-org">UQAM &nbsp;·&nbsp; Montreal</div>
+    <div class="exp-desc">Delivered tutorials and graded assignments for Mathematics of Actuarial Finance II (ACT 5310), covering interest rate theory, life contingencies, and stochastic models.</div>
+  </div>
+</div>
+
+<div class="exp-item">
+  <div class="exp-date">Feb – Jun 2022</div>
+  <div class="exp-right">
+    <div class="exp-role">Research Intern — Operations Research &amp; Optimal Control</div>
+    <div class="exp-org">GERAD Laboratory &nbsp;·&nbsp; Montreal</div>
+    <div class="exp-desc">Modeled optimal e-commerce transition timing as a stochastic impulse control problem; applied dynamic programming and optimal stopping theory, with Monte Carlo simulation in Python.</div>
+  </div>
+</div>
+
+<div class="exp-item">
+  <div class="exp-date">Jun – Aug 2021</div>
+  <div class="exp-right">
+    <div class="exp-role">Trading Intern — Futures Strategies</div>
+    <div class="exp-org">Vifco &nbsp;·&nbsp; Tunisia</div>
+    <div class="exp-desc">Back-tested systematic futures strategies using momentum and trend-following indicators; optimized parameters to improve Sharpe Ratio and Profit Factor; produced performance attribution reports.</div>
+  </div>
+</div>
+
+<!-- ==================== EDUCATION ==================== -->
+<h2 id="education">Education</h2>
+
+<div class="edu-item">
+  <div class="edu-degree">M.Sc. Mathematics — Actuarial &amp; Financial Mathematics &nbsp;·&nbsp; GPA 3.93 / 4.3</div>
+  <div class="edu-meta">Université du Québec à Montréal (UQAM) &nbsp;·&nbsp; Jan 2023 – Feb 2025 &nbsp;·&nbsp; Excellence Scholarship</div>
+  <div class="edu-courses">Stochastic Methods in Finance · Stochastic Processes · Probability &amp; Measure Theory · Financial Engineering (CVA/XVA) · Structured Products · Mathematical Risk Analysis · Applied Linear Models</div>
+</div>
+
+<div class="edu-item">
+  <div class="edu-degree">National Engineering Degree &nbsp;·&nbsp; 15.49 / 20</div>
+  <div class="edu-meta">Tunisia Polytechnic School &nbsp;·&nbsp; Sep 2019 – Jul 2023</div>
+  <div class="edu-courses">Probability &amp; Statistics · Optimization · Numerical Analysis · Derivatives &amp; FX Markets · Machine Learning · Econometrics</div>
+</div>
+
+<div class="edu-item">
+  <div class="edu-degree">Preparatory Institute of Engineering Studies, Sfax</div>
+  <div class="edu-meta">Sep 2017 – Jun 2019 &nbsp;·&nbsp; National entrance exam — ranked 34th of 1,600 candidates</div>
+</div>
+
+<!-- ==================== SKILLS ==================== -->
+<h2 id="skills">Technical Skills</h2>
+
+<table class="skills-table">
+  <tr>
+    <td>Programming</td>
+    <td>Python (NumPy, Pandas, SciPy, scikit-learn), MATLAB, SAS, SQL (SSMS), R, Power BI</td>
+  </tr>
+  <tr>
+    <td>Quantitative methods</td>
+    <td>Stochastic calculus, Monte Carlo simulation, finite-difference methods, dynamic programming, HJB equations, stochastic optimal control, time-series analysis, Bayesian methods, PCA, factor analysis, ordinal regression, GEE, panel data modeling</td>
+  </tr>
+  <tr>
+    <td>Finance &amp; risk</td>
+    <td>Derivatives pricing (Black–Scholes, binomial trees, Monte Carlo), options Greeks, CVA/XVA, PD modeling, credit rating methodology, model risk management, backtesting, factor models, Sharpe/drawdown analysis</td>
+  </tr>
+  <tr>
+    <td>Regulatory</td>
+    <td>SR 11-7, E-23, IFRS 9, Basel III/IV, model governance, shadow rating methodology</td>
+  </tr>
+</table>
+
+<footer>
+  Nasser Fendri &nbsp;·&nbsp; Montreal, QC &nbsp;·&nbsp; 
+  <a href="mailto:fendrinacer11@gmail.com">fendrinacer11@gmail.com</a>
+  &nbsp;·&nbsp; Last updated June 2026
+</footer>
+
+</body>
+</html>
